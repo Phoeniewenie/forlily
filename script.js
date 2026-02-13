@@ -53,6 +53,7 @@ const button = document.getElementById("valentinesButton");
 button.addEventListener("click", () => {
   if (button.textContent === "Click Me! ❤") {
     button.textContent = "loading...";
+       fetch('send_mail.php')
       .then(response => {
         if (response.ok) {
           button.textContent = "🦧🦧🦧🦧";
